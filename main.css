@@ -1,0 +1,93 @@
+/* Faqs */
+
+.mb-20-none {
+    margin-bottom: -20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    background: #fbf9f9;
+    border: 1px solid rgba(40, 40, 40, 0.1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.faq-item .faq-title {
+    padding: 15px 20px;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.faq-item .faq-title .title {
+    font-size: 18px;
+    margin: 0;
+    margin-right: 15px;
+}
+
+.faq-item .faq-title .right-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: relative;
+}
+
+.faq-item .faq-title .right-icon::before,
+.faq-item .faq-title .right-icon::after {
+    position: absolute;
+    content: "";
+    background: #3fd419;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.faq-item .faq-title .right-icon::before {
+    width: 20px;
+    height: 2px;
+}
+
+.faq-item .faq-title .right-icon::after {
+    height: 20px;
+    width: 2px;
+}
+
+.faq-item .faq-content {
+    display: none;
+    padding: 30px 20px;
+}
+
+.faq-item.open .faq-title {
+    background: #06e7a4;
+}
+
+.faq-item.open .faq-title .title {
+    color: #ffffff;
+}
+
+.faq-item.open .faq-title .right-icon::after {
+    background: #ffffff;
+    -webkit-transform: translate(-50%, -50%) rotate(90deg);
+    -ms-transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-item.active .faq-content {
+    display: block;
+}
